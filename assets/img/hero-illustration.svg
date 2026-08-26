@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="640" height="640" role="img" aria-label="A dashboard window with a rising chart, a mobile app screen and a verified badge">
+  <defs>
+    <linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4F46E5" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#4F46E5" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="winClip">
+      <rect x="48" y="138" width="404" height="286" rx="18"/>
+    </clipPath>
+  </defs>
+
+  <g transform="translate(0,-14)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- ground -->
+    <ellipse cx="320" cy="566" rx="250" ry="20" fill="#4F46E5" opacity=".09"/>
+
+    <!-- decorative accents -->
+    <circle cx="396" cy="112" r="7" fill="#4F46E5" opacity=".45"/>
+    <circle cx="36" cy="250" r="6" fill="#4F46E5" opacity=".3"/>
+    <circle cx="196" cy="500" r="6" fill="#4F46E5" opacity=".3"/>
+
+    <!-- desktop window -->
+    <rect x="48" y="138" width="404" height="286" rx="18" fill="#fff" stroke="#1E1B4B" stroke-width="3"/>
+    <g clip-path="url(#winClip)">
+      <rect x="48" y="180" width="92" height="244" fill="#F6F6FE"/>
+      <path d="M140 180 V424" stroke="#E4E2F9" stroke-width="2"/>
+      <rect x="64" y="200" width="60" height="9" rx="4.5" fill="#4F46E5"/>
+      <rect x="64" y="222" width="48" height="9" rx="4.5" fill="#C7C4F5"/>
+      <rect x="64" y="244" width="56" height="9" rx="4.5" fill="#C7C4F5"/>
+      <rect x="64" y="266" width="44" height="9" rx="4.5" fill="#C7C4F5"/>
+    </g>
+    <path d="M48 180 H452" stroke="#1E1B4B" stroke-width="3"/>
+    <circle cx="78" cy="159" r="5.5" fill="#C7C4F5"/>
+    <circle cx="98" cy="159" r="5.5" fill="#C7C4F5"/>
+    <circle cx="118" cy="159" r="5.5" fill="#4F46E5"/>
+    <rect x="150" y="150" width="210" height="18" rx="9" fill="#EFEEFC"/>
+
+    <!-- window content -->
+    <rect x="164" y="200" width="124" height="13" rx="6.5" fill="#1E1B4B"/>
+    <rect x="164" y="222" width="186" height="8" rx="4" fill="#C7C4F5"/>
+
+    <rect x="164" y="246" width="260" height="156" rx="12" fill="#FBFBFF" stroke="#E4E2F9" stroke-width="2"/>
+    <path d="M182 378 H406" stroke="#E9E7FA" stroke-width="2"/>
+    <path d="M182 352 L214 332 L246 342 L278 306 L310 318 L342 288 L374 274 L406 258 L406 378 L182 378 Z" fill="url(#chartFill)"/>
+    <path d="M182 352 L214 332 L246 342 L278 306 L310 318 L342 288 L374 274 L406 258" stroke="#4F46E5" stroke-width="4"/>
+    <circle cx="342" cy="288" r="5" fill="#fff" stroke="#4F46E5" stroke-width="3"/>
+    <circle cx="406" cy="258" r="6" fill="#fff" stroke="#4F46E5" stroke-width="3"/>
+
+    <!-- floating metric card -->
+    <rect x="436" y="136" width="156" height="82" rx="16" fill="#fff" stroke="#1E1B4B" stroke-width="3"/>
+    <rect x="452" y="156" width="48" height="8" rx="4" fill="#C7C4F5"/>
+    <path d="M452 198 L476 180 L500 190 L524 166 L548 176 L572 150" stroke="#4F46E5" stroke-width="3.5"/>
+
+    <!-- phone -->
+    <rect x="430" y="250" width="178" height="326" rx="30" fill="#fff" stroke="#1E1B4B" stroke-width="3"/>
+    <rect x="442" y="262" width="154" height="302" rx="21" fill="#F7F7FE"/>
+    <rect x="494" y="272" width="50" height="11" rx="5.5" fill="#1E1B4B"/>
+
+    <rect x="456" y="298" width="126" height="72" rx="15" fill="#4F46E5"/>
+    <circle cx="560" cy="322" r="11" fill="#fff" opacity=".22"/>
+    <rect x="472" y="316" width="46" height="7" rx="3.5" fill="#fff" opacity=".55"/>
+    <rect x="472" y="332" width="74" height="13" rx="6.5" fill="#fff" opacity=".95"/>
+
+    <circle cx="472" cy="406" r="12" fill="#E8E7FB"/>
+    <rect x="494" y="398" width="72" height="8" rx="4" fill="#C7C4F5"/>
+    <rect x="494" y="412" width="46" height="6" rx="3" fill="#E8E7FB"/>
+
+    <circle cx="472" cy="450" r="12" fill="#E8E7FB"/>
+    <rect x="494" y="442" width="72" height="8" rx="4" fill="#C7C4F5"/>
+    <rect x="494" y="456" width="46" height="6" rx="3" fill="#E8E7FB"/>
+
+    <circle cx="472" cy="494" r="12" fill="#E8E7FB"/>
+    <rect x="494" y="486" width="72" height="8" rx="4" fill="#C7C4F5"/>
+    <rect x="494" y="500" width="46" height="6" rx="3" fill="#E8E7FB"/>
+
+    <rect x="490" y="540" width="58" height="6" rx="3" fill="#C7C4F5"/>
+
+    <!-- verified badge -->
+    <circle cx="96" cy="474" r="36" fill="#fff" stroke="#1E1B4B" stroke-width="3"/>
+    <path d="M80 474 L91 485 L112 461" stroke="#4F46E5" stroke-width="5.5"/>
+  </g>
+</svg>
