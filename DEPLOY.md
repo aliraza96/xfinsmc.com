@@ -118,3 +118,40 @@ git add -A && git commit -m "your message" && git push
 ```
 
 GitHub Pages rebuilds automatically, typically within a minute.
+
+---
+
+## Troubleshooting: certificate never provisions
+
+Symptom: `https://xfinsmc.com` shows a browser security warning, and the served
+certificate is `CN=*.github.io` rather than `CN=xfinsmc.com`.
+
+Cause: the custom domain was attached to Pages *before* DNS pointed at GitHub,
+so GitHub's first domain validation failed and the retry did not fire. The API
+reports `https_certificate: null`.
+
+Fix — detach and reattach the domain to force fresh validation:
+
+```bash
+echo '{"cname":null}'            | gh api -X PUT repos/aliraza96/xfinsmc.com/pages --input -
+echo '{"cname":"xfinsmc.com"}'   | gh api -X PUT repos/aliraza96/xfinsmc.com/pages --input -
+```
+
+Then wait for the cert and enable enforcement:
+
+```bash
+gh api repos/aliraza96/xfinsmc.com/pages --jq '.https_certificate.state'   # approved
+echo '{"https_enforced":true}' | gh api -X PUT repos/aliraza96/xfinsmc.com/pages --input -
+```
+
+Two gotchas:
+
+- **Send `cname` and `https_enforced` in separate requests.** A PUT containing
+  `https_enforced` while no certificate exists fails with
+  `404 The certificate does not exist yet` — and that failure can block the
+  `cname` update in the same call, leaving the domain detached and the site 404ing.
+- **Use `--input -` with JSON, not `-f`/`-F`.** The `-f cname=...` form did not
+  persist reliably here; the JSON body did.
+
+Detaching the domain takes the site offline until it is reattached, and the edge
+needs 2-3 minutes afterwards to serve the homepage again. Do it deliberately.
